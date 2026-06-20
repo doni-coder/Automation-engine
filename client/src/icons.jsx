@@ -1,0 +1,81 @@
+import {
+  Zap,
+  Webhook,
+  MessageCircle,
+  Globe,
+  Brain,
+  GitBranch,
+  PenSquare,
+  ClipboardList,
+  Moon,
+  Sun,
+  Trash2,
+  X,
+  Plus,
+  ArrowLeft,
+  RefreshCw,
+  AlertTriangle,
+  Lightbulb,
+  CheckCircle2,
+  XCircle,
+  Layout,
+  Split,
+  Move,
+  MoveUpRight,
+  Activity,
+  Edit3,
+  Sparkles,
+  Link2,
+  List,
+  Maximize2,
+  Minimize2,
+  Play,
+  Save,
+  Loader2,
+} from 'lucide-react';
+
+const ICON_MAP = {
+  Zap,
+  Webhook,
+  MessageCircle,
+  Globe,
+  Brain,
+  GitBranch,
+  PenSquare,
+  ClipboardList,
+  Moon,
+  Sun,
+  Trash2,
+  X,
+  Plus,
+  ArrowLeft,
+  RefreshCw,
+  AlertTriangle,
+  Lightbulb,
+  CheckCircle2,
+  XCircle,
+  Layout,
+  Split,
+  Move,
+  MoveUpRight,
+  Activity,
+  Edit3,
+  Sparkles,
+  Link2,
+  List,
+  Maximize2,
+  Minimize2,
+  Play,
+  Save,
+  Loader2,
+};
+
+/**
+ * Icon component that resolves a string name to a Lucide icon.
+ * Usage: <Icon name="Zap" size={16} className="..." />
+ * Falls back to Zap icon if the name is not found.
+ */
+export function Icon({ name, size = 16, className = '', ...props }) {
+  const LucideIcon = ICON_MAP[name] || Zap;
+  return <LucideIcon size={size} className={className} {...props} />;
+}
